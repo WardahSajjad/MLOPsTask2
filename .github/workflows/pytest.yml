@@ -18,8 +18,9 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: make install
+      - name: Install pytest
+        run: pip install pytest
 
-      - name: Execute tests
-        run: make test
+      - name: Run tests
+        run: |
+          pytest test.py
